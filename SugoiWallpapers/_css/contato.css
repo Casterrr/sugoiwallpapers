@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+div#interface-contato{
+    background-color: #ffffff;
+    margin: 30px auto 30px auto;
+    width: 85%;
+    height: 100%;
+    padding: 10px;
+    padding-bottom: 40px
+}
