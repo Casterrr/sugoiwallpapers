@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+/*GLOBAL*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: indigo;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+p,h2{
+    text-indent: 20px;
+    padding: 5px;
+    margin-left: 20px;
+}
+ul {
+    list-style: none;
+}
+
+/*Textos*/
+
+header h1{
+    font-size: 15px;
+    color: rgb(188, 94, 255);
+    margin-left: 70px;
+
+    animation: move 1s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes move{
+    from{
+        margin-left: 70px;
+    }
+    to{
+        margin-left: 30px;
+    }
+}
+header a{
+    text-decoration: none;
+}
+
+header li{
+    text-align: center;
+}
+
+section.content h2{
+    width: 60%;
+    background-color: rgb(94, 217, 255);
+    text-shadow: 2px 2px 1px indigo;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    margin-left: 20px;
+    padding: 3px;
+}
+
+section.content span#tema-wallpaper{
+    background-color: indigo;
+    padding: 1px 5px;
+    text-shadow: 2px 2px 1px rgb(58, 0, 99);
+    border-radius: 40px;
+}
+
+/*HEADER*/
+
+header {
+    position: relative;
+    width: 100%;
+    background-color: rgb(58, 0, 99);
+    border-bottom: 1px solid rgb(188, 94, 255);
+    box-shadow: 2px 2px 8px black;
+    
+}
+/*Cabecalho fluturante (feito com js)*/
+header.sticky{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(58, 0, 99);
+    border-bottom: 1px solid rgb(188, 94, 255);
+    box-shadow: 2px 2px 8px black;
+}
+header.sticky h1{
+    display: none;
+}
+header.sticky nav{
+    margin: -7px 25px -10px auto;
+}
+header.sticky img.logotipo{
+    padding: 10px 8px 18px;
+}
+/* header.sticky + section.content{
+    padding-top: 100px;
+} */
+/*Logotipo do header*/
+header img.logotipo{
+    padding: 8px 8px 0;
+    margin-bottom: -13px;
+    transition: all 0.3s;
+}
+header img.logotipo:hover{
+    padding: 8px 8px 0;
+    margin-bottom: -13px;
+    transform: scale(1.05);
+}
+
+div#logo{
+    display: block;
+    float: left;
+}
+
+/*Navigation bar*/
+header nav{
+    display: block;
+    float: right;
+    margin: auto 25px auto auto;
+}
+header ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    
+}
+header li{
+    background-color: rgb(94, 217, 255);
+    color: indigo;
+    padding: 5px;
+    margin: 3px 6px;
+    transition: all 0.3s;
+}
+header li:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/*CONTENT*/
+section{
+    width: 90%;
+    background-color: rgb(58, 0, 99);
+    margin: 20px auto;
+}
+main.wallpapers {
+    width: 95%;
+    background-color: rgb(25, 0, 43);
+    border: 2px solid rgb(214, 214, 214);
+    margin: 10px auto;
+}
+
+main.wallpapers ul{
+    width: 100%;
+    margin: 10px auto;
+    align-items: center;
+}
+main.wallpapers li{
+    display: inline-block;
+    padding: 5px;
+}
+
+main.wallpapers img{
+    width: 350px;
+    height: 200px;
+    border: 3px solid white;
+    transition: All 0.3s;
+}
+main.wallpapers img:hover{
+    transform: scale(1.03);
+}
+
+/*Table*/
+table.table-guide tr#personagens td{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 0, 112);
+    padding: 10px;
+    border: none;
+    
+}
+table.table-guide td{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: rgb(255, 255, 255);
+    border-left: 1px solid rgb(89, 0, 153);
+    border-bottom: 1px solid rgb(89, 0, 153);
+    padding: 8px;
+    text-shadow: 2px 2px 1px rgb(41, 0, 88);
+}
+table.table-guide{
+    width: 90%;
+    border-spacing: 0px;
+    margin: 0 auto 30px auto;
+    border: 1px solid rgb(89, 0, 153);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    background-color: rgb(41, 0, 88);
+}
+
+table.table-guide tr{
+    background-color: rgb(0, 15, 99);
+}
+table.table-guide tr:hover{
+    background-color: rgb(48, 0, 136);
+}
+table.table-guide tr#aviso{
+    background-color: #41007e ;
+    text-align: center;
+}
+/*FOOTER*/
+footer{
+    text-align: center;
+    border-top: 1px solid rgb(188, 94, 255);
+    background-color: rgb(58, 0, 99);
+    margin-top: auto;
+}
